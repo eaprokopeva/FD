@@ -32,3 +32,8 @@ Temporary Items
 *.icloud
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
+# Исключить все файлы в папке data
+data/
+
+# Исключить все файлы с расширением .ipynb
+*.ipynb

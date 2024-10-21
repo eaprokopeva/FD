@@ -18,10 +18,10 @@ def generate_user(fake: Faker):
     inn = fake.individuals_inn()
     phone = fake.phone_number()
     return fullname, birthday, country_of_birth, country, region,city_name, address, client_id, inn, phone 
-    
+
 def generate_users_rows(fake: Faker, NROWS: int):
     with open(
-            "../data/clients.csv", "w", encoding="utf-8", newline=""
+            "/Users/ekaterinaprokopeva/Desktop/Aston_Project/fraud_detection/data/clients.csv", "w", encoding="utf-8", newline=""
     ) as file:
         writer = csv.writer(file, delimiter=";")
         for i in range(NROWS):
