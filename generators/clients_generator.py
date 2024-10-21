@@ -14,10 +14,11 @@ def generate_user(fake: Faker):
     region = fake.region()
     city_name = fake.city_name()
     address = fake.street_address()
-    passport = randint(10 ** 9, 10 ** 10 - 1)
+    client_id = randint(10 ** 9, 10 ** 10 - 1)
+    inn = fake.individuals_inn()
     phone = fake.phone_number()
-    return fullname, birthday, country_of_birth, country, region,city_name, address, passport, phone 
-
+    return fullname, birthday, country_of_birth, country, region,city_name, address, client_id, inn, phone 
+    
 def generate_users_rows(fake: Faker, NROWS: int):
     with open(
             "../data/clients.csv", "w", encoding="utf-8", newline=""
